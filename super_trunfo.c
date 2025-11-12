@@ -7,11 +7,11 @@ int main(){
 
     // Primeira carta: A
     char codigoDaCarta1 []= "A01";
-    char nomeDaCidade1 [30] = "Curitiba";
-    float PopulacaoDaCidade1 = 1.8;
-    float AreaEmKmCidade1 = 432;
-    float PIBCidade1 = 98;
-    int NumerosDePontosTuristicosCidade1 = 35 , opcao1;
+    char nomeDaCidade1 [30] ;
+    float PopulacaoDaCidade1 ;
+    float AreaEmKmCidade1 ;
+    float PIBCidade1 ;
+    int NumerosDePontosTuristicosCidade1 , opcao1;
     float DensidadePopulacionalcidade1;
     float PIBpercapitacidade1;
     float superPoder1;
@@ -21,11 +21,11 @@ int main(){
 
     // Segunda carta: B
     char codigoDaCarta2 []= "B01";
-    char nomeDaCidade2 [30] = "Goiania";
-    float PopulacaoDaCidade2 = 1.5;
-    float AreaEmKmCidade2 = 728;
-    float PIBCidade2 = 59.86;
-    int NumerosDePontosTuristicosCidade2 = 20, opcao2;
+    char nomeDaCidade2 [30] ;
+    float PopulacaoDaCidade2 ;
+    float AreaEmKmCidade2 ;
+    float PIBCidade2 ;
+    int NumerosDePontosTuristicosCidade2 , opcao2;
     float DensidadePopulacionalcidade2;
     float PIBpercapitacidade2;
     float superPoder2;
@@ -33,7 +33,7 @@ int main(){
 
     
 
-   /* printf("----Bem vindo ao cadastro de cartas!!----\n");
+    printf("----Bem vindo ao cadastro de cartas!!----\n");
    printf("------------------------------------------\n\n");
 
    // carta A
@@ -53,7 +53,7 @@ int main(){
    scanf(" %f", &PIBCidade1 );
 
    printf("Quantos pontos Turisticos tem em %s?\n",nomeDaCidade1 );
-   scanf(" %d", &NumerosDePontosTuristicosCidade1); */
+   scanf(" %d", &NumerosDePontosTuristicosCidade1); 
 
    DensidadePopulacionalcidade1 = (PopulacaoDaCidade1 * 1e6) / AreaEmKmCidade1;
 
@@ -64,7 +64,7 @@ int main(){
 
     // // carta B
 
-   /* printf("Agora vamos para a segunda carta, ela receberá o codigo de especificação: B01. \n\nDigite qual será o nome da sua cidade: \n");
+    printf("Agora vamos para a segunda carta, ela receberá o codigo de especificação: B01. \n\nDigite qual será o nome da sua cidade: \n");
    scanf(" %[^\n]", nomeDaCidade2 );
 
    printf("Qual é a população de habitantes (Em Milhões) de %s ?\n",nomeDaCidade2 );
@@ -77,7 +77,7 @@ int main(){
    scanf(" %f", &PIBCidade2 );
 
    printf("Quantos pontos Turisticos tem em %s?\n",nomeDaCidade2 );
-   scanf(" %d", &NumerosDePontosTuristicosCidade2 ); */
+   scanf(" %d", &NumerosDePontosTuristicosCidade2 ); 
 
 
    DensidadePopulacionalcidade2 = (PopulacaoDaCidade2 *1e6) / AreaEmKmCidade2;
