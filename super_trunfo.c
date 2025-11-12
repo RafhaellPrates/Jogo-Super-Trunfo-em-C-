@@ -1,6 +1,9 @@
 #include <stdio.h>
 
 int main(){
+
+    int resultado;
+
     // Primeira carta: A
     char codigoDaCarta1 []= "A01";
     char nomeDaCidade1 [20];
@@ -10,6 +13,8 @@ int main(){
     int NumerosDePontosTuristicosCidade1;
     float DensidadePopulacionalcidade1;
     float PIBpercapitacidade1;
+    float superPoder1;
+    
 
     // Segunda carta: B
     char codigoDaCarta2 []= "B01";
@@ -20,6 +25,8 @@ int main(){
     int NumerosDePontosTuristicosCidade2;
     float DensidadePopulacionalcidade2;
     float PIBpercapitacidade2;
+    float superPoder2;
+    
 
     printf("----Bem vindo ao cadastro de cartas!!----\n");
     printf("------------------------------------------\n\n");
@@ -44,7 +51,11 @@ int main(){
     scanf(" %d", &NumerosDePontosTuristicosCidade1);
 
     DensidadePopulacionalcidade1 = (PopulacaoDaCidade1 * 1e6) / AreaEmKmCidade1;
+
     PIBpercapitacidade1 =  (PIBCidade1 *1e9 ) / (PopulacaoDaCidade1 * 1e6);
+
+    superPoder1 = PopulacaoDaCidade1 + AreaEmKmCidade1 + PIBCidade1 + NumerosDePontosTuristicosCidade1 +
+     PIBpercapitacidade1 - DensidadePopulacionalcidade1;
 
     // carta B
 
@@ -65,8 +76,11 @@ int main(){
 
 
     DensidadePopulacionalcidade2 = (PopulacaoDaCidade2 *1e6) / AreaEmKmCidade2;
+
     PIBpercapitacidade2 =  (PIBCidade2 *1e9 ) / (PopulacaoDaCidade2 * 1e6);
 
+    superPoder2 = PopulacaoDaCidade2 + AreaEmKmCidade2 + PIBCidade2 + NumerosDePontosTuristicosCidade2 +
+     PIBpercapitacidade2 - DensidadePopulacionalcidade2;
     
 
     // carta A
@@ -94,12 +108,34 @@ int main(){
     printf("Densidade Populacional: %.2f hab/km². \n", DensidadePopulacionalcidade2);
     printf("PIB per capita: %.2f reais.\n\n", PIBpercapitacidade2);
 
+    //comparação das cartas
 
-    
-    
+    printf("-------------------------------------------\n");
+    printf("-----------Comparando-as-cartas------------\n");
+    printf("-------------------------------------------\n");
+
+
+    resultado = superPoder1 > superPoder2;
+    printf("Resultado super poder: %d\n", resultado);
+
+    resultado = PopulacaoDaCidade1 > PopulacaoDaCidade2;
+    printf("Resultado população da cidade: %d\n", resultado);
+
+    resultado = AreaEmKmCidade1 > AreaEmKmCidade2;
+    printf("Resultado da área: %d\n", resultado);
+
+    resultado = PIBCidade1 > PIBCidade2;
+    printf("Resultado PIB: %d\n", resultado);
+
+    resultado = NumerosDePontosTuristicosCidade1 > NumerosDePontosTuristicosCidade2;
+    printf("Resultado de pontos turisticos: %d\n", resultado);
+
+    resultado = DensidadePopulacionalcidade1 < DensidadePopulacionalcidade2;
+    printf("Resultado densidade populacional: %d\n", resultado);
+
+    resultado = PIBpercapitacidade1 > PIBpercapitacidade2;
+    printf("Resultado PIB per capita: %d\n", resultado);
+
     return 0;
-
-
-
-    
+  
 }
